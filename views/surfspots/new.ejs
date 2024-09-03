@@ -1,0 +1,33 @@
+<% layout('/layout/boilerplate') %>
+<div class="row">
+  <h1 class="text-center">New spot found?</h1>
+  <div class="col-md-6 offset-md-3">
+    <form action="/surfspots" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label class="form-label" for="title">Spot Name</label>
+        <input class="form-control" type="text" id="title" name="surfspot[title]" required>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="location">Location</label>
+        <input class="form-control" type="text" id="location" name="surfspot[location]" required>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="image" class="form-label">Upload image</label>
+        <input class="form-control" type="file" id="image" name="image" multiple>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="description">Describe it!</label>
+        <textarea class="form-control" type="text" id="description" name="surfspot[description]"></textarea>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-success">Add Spot</button>
+      </div>
+    </form>
+
+    <a href="/surfspots">Back</a>
+  </div>
+</div>
